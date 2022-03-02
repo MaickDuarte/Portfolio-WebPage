@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    border-style: none;
+}
+/* NavBar com Sobre, Projetos, Contato */
+.topo{
+    background-color: rgb(3, 3, 3);;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    top:0;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-items{
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 2rem;
+   
+    padding: 0 20px;
+}
+.header-items:hover{
+    transform: scale(1.2);
+    color: rgb(222, 209, 252);
+}
+/* Sobre: Apresentação, foto, fundo dividido */
+.bg{
+    margin-top: 5vh;
+    display: flex;
+    width: 100%;
+
+}
+.esquerda{
+    background-color: black;
+    flex:1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto{
+    color: white;
+    font-size: 3rem;
+    margin: auto;
+    text-align: center;
+    margin:30px;
+    font-family: 'Smooch Sans', sans-serif;
+
+}
+.t1, .t2{
+    margin-top:20px
+}
+
+.direita{
+    background:linear-gradient(90deg, black 50%, #29065f 50%);
+    flex:1.5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.foto{
+    max-width: 65%;
+}
+
+/* espaço dos projetos*/
+.espaço-projetos-alterar, .espaço-contato-alterar{
+    width: 100%;
+    height: 800px;
+    background-color: green;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* espaço do contato*/
+
+.espaço-contato-alterar{
+    background-color: blue;
+    height: 200px;
+
+}
+
+
+
+
+
+
+
+/* se a tela for menor que 960px*/
+@media (max-width:960px){
+    .topo{
+        justify-content: center;
+        
+    }
+    .bg{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .esquerda{
+        background:linear-gradient(90deg, black 50%, #29065f 50%);
+    }
+    .direita{
+        align-items: baseline;
+    }
+    .foto{
+        max-width: 90%;
+    }
+    .desce{
+        background:linear-gradient(90deg,black 50%, red 50%)
+    }
+}
