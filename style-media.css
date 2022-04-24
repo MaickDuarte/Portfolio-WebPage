@@ -1,0 +1,29 @@
+/* se a tela for menor que 960px*/
+@media (max-width:960px){
+    .topo{
+        justify-content: center;
+        
+    }
+    .bg{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .esquerda{
+        background:linear-gradient(90deg, black 50%, #29065f 50%);
+    }
+    .texto{
+        font-size: 2.3rem;
+    }
+    .foto{
+        max-width: 90%;
+    }
+    .desce{
+        background:linear-gradient(90deg,black 50%, red 50%)
+    }
+    /* Projetos */  
+    .conjunto-projetos{
+        flex-direction: column;
+    }
+
+
+}
