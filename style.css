@@ -3,6 +3,13 @@
     margin:0;
     box-sizing: border-box;
     border-style: none;
+    font-family: 'Smooch Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+#menu{
+    height: 0px;
 }
 #espaco{
     height:8vh;
@@ -12,7 +19,8 @@
 }
 /* NavBar com Sobre, Projetos, Contato */
 .topo{
-    background-color: rgb(0, 0, 0);;
+    background-color: rgba(0, 0, 0, 0.473);
+    backdrop-filter: blur(2px);
     width: 100%;
     height: 8vh;
     position: fixed;
@@ -23,10 +31,11 @@
     align-items: center;
 }
 .header-items{
-    font-family: 'Smooch Sans', sans-serif;
+    
     font-size: 2rem;
-   
+    color: white;
     padding: 0 20px;
+    text-decoration: underline solid #390883;
 }
 .header-items:hover{
     transform: scale(1.2);
@@ -34,10 +43,8 @@
 }
 /* Sobre: Apresentação, foto, fundo dividido */
 .bg{
-
     display: flex;
     width: 100%;
-
 }
 .esquerda{
     background-color: black;
@@ -53,7 +60,6 @@
     font-size: 3rem;
     margin: auto;
     text-align: center;
-    margin:30px;
     font-family: 'Smooch Sans', sans-serif;
 
 }
@@ -76,22 +82,57 @@
 }
 
 /* espaço dos projetos*/
-.conjunto-projetos, .espaço-contato-alterar{
+
+.conjunto-projetos{
     width: 100%;
-    height: 800px;
-    background-color: green;
+    margin: auto;
+    padding: 100px 0 150px 0;
+    background-color: rgb(3, 2, 8);
     color: white;
     font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.projetos{
+    margin:20px auto;
+    height: 250px;
+    width: 30vw;
+    background-color: rgb(22, 14, 14);
+    border-width: 10px;
+    border-style: solid;
+    border-top: none;border-bottom: none;border-right: none;
+}
+.projetos:hover{
+    animation-name:escala-cor;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+    @keyframes escala-cor{
+        100%{
+            transform: scale(1.05);
+            border-color: #08833b;
+        }
+    }
+.nome-projeto{
+    margin-left: 15px;
+}
+.imagem-projeto{
+    background-color: rgb(10, 14, 75);
+    height: 84.5%;
+    width: 100%;
+}
+.teste{
+    height: 100%;
+    width: 100%;
+    background-color: red;
 }
 
 
 /* espaço do contato*/
 
 .espaço-contato-alterar{
-    background-color: blue;
+    background-color: rgb(94, 94, 94);
     height: 200px;
 
 }
