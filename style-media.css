@@ -23,7 +23,7 @@
         border-radius: 5px;
         cursor: pointer;
         }
-    .bg{
+    .apresentacao{
         flex-direction: column;
         height: 100vh;
     }
@@ -31,6 +31,7 @@
         background:linear-gradient(90deg, black 50%, #29065f 50%);
     }
     .direita{
+        flex:1.2;
         align-items: flex-start;
     }
     .texto{
@@ -51,5 +52,7 @@
     .projetos{
         width: 80%;
     }
-
+    .imagem-projeto{
+        transform: scale(0.8);
+    }
 }
