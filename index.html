@@ -14,17 +14,18 @@
 </head>
 <body>
     <!--Navbar no topo, com sobre, projetos e contato-->
-    <header>
+    <header id="Home">
         <div class="topo">
-            <ul class="header-items">Sobre</ul>
+            <a href="#Home"><ul class="header-items">Home</ul></a>
+            <a href="#Sobre-Mim"><ul class="header-items">Sobre</ul></a>
             <a href="#Projetos"><ul class="header-items">Projetos</ul></a>
             <ul class="header-items">Contato</ul>
         </div>
     </header>
     <div id="espaco"></div>
     <div id="menu">≡</div>
-    <!--Sobre: Apresentação + foto + fundo dividido-->
-    <section class="apresentacao">
+    <!--home-->
+        <section class="apresentacao">
             <div class="esquerda">
                 <div class="texto">
                     <p class="t1">Olá, Eu sou Maick!</p>
@@ -34,7 +35,91 @@
             <div class="direita">
                 <img class="foto" src="eu rosto.png" alt="">
             </div>
+
+<!-- sobre -->
         </section>
+        <section id="Sobre-Mim">
+
+            <div class="esquerda-sobre">
+                 <img src="eueu2.jpg" alt="" class="foto-sobre">
+                 <a href="Maick Curriculo completo.pdf" class="links pointer" download="">CURRICULO</a>
+                 <a href="mailto: maickduarte.2@hotmail.com?subject=Olá Maick, vim pelo seu portifólio." class="links pointer" target="_blank">EMAIL</a>
+                 <a href="https://linktr.ee/maickduarte" target="_blank" class="links pointer">CERTIFICADOS</a>
+            </div> 
+     
+            <div class="direita-sobre">
+             <h1 class="sobre-mim">SOBRE MIM</h1>
+             <p class="apresentacao-sobre">Olá, eu sou Maick, tenho 20 anos e sou estudante de Analise e Desenvolvimento de sistemas
+                 no Centro Universitário Senac. Atualmente eu venho estudado sobre front-end, mas meu foco 
+                 é no futuro me tornar um desenvolvedor full-stack.
+             </p>
+     
+             <hr class="separar-horizontal">
+             <div class="temas">
+             <h2 id="ph" class="habilidades pointer" onclick="mostrarHabilidades()">PRINCIPAIS HABILIDADES</h2>
+             <h2 id="ep" class="experiencias pointer" onclick="mostrarExperiencias()">EXPERIENCIAS PROFISSIONAIS</h2>
+             </div>
+             <p id="escolha">ESCOLHA UMA DAS OPÇÕES ACIMA!</p>
+             <!--  agora vou colocar as opções, enquanto nao tiver selecionado
+             elas ficam display:none, a que selecionar, volta a aparecer e deixa a class
+             "escolha" none, se clicar na outra, inverte  -->
+             <div id="listaHabilidades" style="display: none;">
+                 <ul>
+                     <li>HTML</li>
+                     <li>CSS</li>
+                     <li>JAVASCRIPT</li>
+                     <li>BOOTSTRAP</li>
+                 </ul>
+                 <ul>
+                     <li>REACT</li>
+                     <li>SASS</li>
+                     <li>MYSQL</li>
+                     <li>JQUERY</li>
+                 </ul>
+             </div>
+             
+                 <div id="menuExperiencias" style="display: none;">
+                     <div class="lista-experiencias">
+                         <h2 class="experiencia pointer" id="tituloJovem" onclick="mostrarJovem()">JOVEM APRENDIZ</h2>
+                         <hr class="separar-vertical">
+                         <h2 class="experiencia pointer" id="tituloTecnico" onclick="mostrarTecnico()">TECNICO DE SUPORTE EM TI</h2>
+                     </div>
+     
+     
+                     <div class="descricao-experiencia"  id="jovemExperiencia"> 
+                         <div class="dados-experiencia">
+                         <h2 class="h2">MOVICARGA</h2>
+                         <h2 class="h2">05/2019 - 05/2021</h2>
+                         </div>
+                         <p>
+                         Realizava funções administrativas no geral. Criação e manuseio de planilhas no Excel, controle de deslocamento de 
+                         veículos, inventário dos equipamentos da empresa, solicitação de armazém, compra e transferência de produtos via 
+                         TOTVS, organização de arquivos, etc.
+                         </p> 
+                     </div>
+                     <div class="descricao-experiencia" id="tecnicoExperiencia" style="display:none;"> 
+                         <div class="dados-experiencia">
+                         <h2 class="h2">SAMPASOFT SOLUÇÕES EM TI</h2>
+                         <h2 class="h2">03/2022 - ATUALMENTE</h2>
+                         </div>
+                         <p>
+                         Realizo implantação de um sistema de gestão de restaurantes. Meu trabalho vai desde a manutenção dos 
+                         computadores, tais como encontrar defeitos e sua solução, trocando as peças, etc. Depois a configuração do Windows,
+                         como controle de usuário, firewall, framework e rede. Depois a instalação. Após isso meu trabalho consiste em 
+                         configurar a rede, sendo os roteadores, antenas e impressoras e também passar cabo de rede. Após tudo estar 
+                         configurado e funcionando, eu preencho o banco de dados do software de gestão de restaurantes. E depois de o cliente 
+                         já estar em funcionamento, presto serviço de suporte e manutenção em geral.
+                         </p> 
+                     </div>
+     
+                 </div>
+     
+     
+             </div> 
+     
+     
+         </section>
+         <script src="js.sobre.js"></script>
     <!--Projetos-->
 
         <section id="Projetos" class="conjunto-projetos">
