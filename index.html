@@ -1,149 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt_br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Portfólio - Maick Duarte</title>
     <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-media.css">
-    <title>Portifólio - Maick Duarte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
+    <script src="https://kit.fontawesome.com/614fa0d8d1.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <!--Navbar no topo, com sobre, projetos e contato-->
-    <header id="Home">
-        <div class="topo">
-            <a href="#Home"><ul class="header-items">Home</ul></a>
-            <a href="#Sobre-Mim"><ul class="header-items">Sobre</ul></a>
-            <a href="#Projetos"><ul class="header-items">Projetos</ul></a>
-            <ul class="header-items">Contato</ul>
+    <section id="Home">
+        <header>
+        <div class="bg-nav"></div>
+        <div class="menu" id="menuBotao" onclick="abrirMenu()"><i id="menuBotaoDireto" class="fa-solid fa-bars"></i></div>
+        <div class="nav-bar">
+            <a href="#Home" class="nav-items">Home</a>
+            <a href="#Sobre-Mim" class="nav-items">Sobre</a>
+            <a href="#Projetos" class="nav-items">Projetos</a>
+            <a href="#Contato" class="nav-items">Contato</a>
         </div>
-    </header>
-    <div id="espaco"></div>
-    <div id="menu">≡</div>
-    <!--home-->
-        <section class="apresentacao">
-            <div class="esquerda">
-                <div class="texto">
-                    <p class="t1">Olá, Eu sou Maick!</p>
-                    <p class="t2">Estudante de programação e desenvolvimento front-end</p>
-                </div>
+        </header>
+        <div class="home">
+            <div class="esquerda-home">
+                <p class="home-text ola">Olá, Eu sou Maick!</p>
+                <p class="home-text">Estudante de programação e desenvolvimento front-end</p>
+                <a href="#" target="_blank" class="links links-site">Github</a>
+                <a href="#" target="_blank" class="links links-site">linkedin</a>
             </div>
-            <div class="direita">
-                <img class="foto" src="eu rosto.png" alt="">
+            <div class="direita-home">
+                <img class="foto-home" src="assets/eu rosto.png" alt="">
+                <a href="#" target="_blank" class="links links-mobile">Github</a>
+                <a href="#" target="_blank" class="links links-mobile">linkedin</a>
             </div>
+        </div>
 
+    </section>
+<!------------------------------------------------------------------------------------------->
 <!-- sobre -->
-        </section>
-        <section id="Sobre-Mim">
+</section>
+<section id="Sobre-Mim">
 
-            <div class="esquerda-sobre">
-                 <img src="eueu2.jpg" alt="" class="foto-sobre">
-                 <a href="Maick Curriculo completo.pdf" class="links pointer" download="">CURRICULO</a>
-                 <a href="mailto: maickduarte.2@hotmail.com?subject=Olá Maick, vim pelo seu portifólio." class="links pointer" target="_blank">EMAIL</a>
-                 <a href="https://linktr.ee/maickduarte" target="_blank" class="links pointer">CERTIFICADOS</a>
-            </div> 
+    <div class="esquerda-sobre">
+         <img src="assets/eueu2.jpg" alt="" class="foto-sobre">
+         <a href="Maick Curriculo completo.pdf" class="links pointer curriculo" download="">CURRICULO</a>
+         <a href="mailto: maickduarte.2@hotmail.com?subject=Olá Maick, vim pelo seu portifólio." class="links pointer" target="_blank">EMAIL</a>
+         <a href="https://linktr.ee/maickduarte" target="_blank" class="links pointer">CERTIFICADOS</a>
+         
+    </div> 
+
+    <div class="direita-sobre">
+     <h1 class="sobre-mim">SOBRE MIM</h1>
+     <p class="apresentacao-sobre">Olá, eu sou Maick, tenho 20 anos e sou estudante de Analise e Desenvolvimento de sistemas
+         no Centro Universitário Senac. Atualmente eu venho estudado sobre front-end, mas meu foco 
+         é no futuro me tornar um desenvolvedor full-stack.
+     </p>
+
+     <hr class="separar-horizontal">
+     <div class="temas">
+     <h2 id="ph" class="habilidades pointer" onclick="mostrarHabilidades()">PRINCIPAIS HABILIDADES</h2>
+     <h2 id="ep" class="experiencias pointer" onclick="mostrarExperiencias()">EXPERIENCIAS PROFISSIONAIS</h2>
+     </div>
+     <p id="escolha">ESCOLHA UMA DAS OPÇÕES ACIMA!</p>
+     <!--  agora vou colocar as opções, enquanto nao tiver selecionado
+     elas ficam display:none, a que selecionar, volta a aparecer e deixa a class
+     "escolha" none, se clicar na outra, inverte  -->
+     <div id="listaHabilidades" style="display: none;">
+         <ul>
+             <li>HTML</li>
+             <li>CSS</li>
+             <li>JAVASCRIPT</li>
+             <li>BOOTSTRAP</li>
+         </ul>
+         <ul>
+             <li>REACT</li>
+             <li>SASS</li>
+             <li>MYSQL</li>
+             <li>JQUERY</li>
+         </ul>
+     </div>
      
-            <div class="direita-sobre">
-             <h1 class="sobre-mim">SOBRE MIM</h1>
-             <p class="apresentacao-sobre">Olá, eu sou Maick, tenho 20 anos e sou estudante de Analise e Desenvolvimento de sistemas
-                 no Centro Universitário Senac. Atualmente eu venho estudado sobre front-end, mas meu foco 
-                 é no futuro me tornar um desenvolvedor full-stack.
-             </p>
-     
-             <hr class="separar-horizontal">
-             <div class="temas">
-             <h2 id="ph" class="habilidades pointer" onclick="mostrarHabilidades()">PRINCIPAIS HABILIDADES</h2>
-             <h2 id="ep" class="experiencias pointer" onclick="mostrarExperiencias()">EXPERIENCIAS PROFISSIONAIS</h2>
+         <div id="menuExperiencias" style="display: none;">
+             <div class="lista-experiencias">
+                 <h2 class="experiencia pointer" id="tituloJovem" onclick="mostrarJovem()">JOVEM APRENDIZ</h2>
+                    <hr class="separar-experiencia">
+                 <h2 class="experiencia pointer" id="tituloTecnico" onclick="mostrarTecnico()">TECNICO DE SUPORTE EM TI</h2>
              </div>
-             <p id="escolha">ESCOLHA UMA DAS OPÇÕES ACIMA!</p>
-             <!--  agora vou colocar as opções, enquanto nao tiver selecionado
-             elas ficam display:none, a que selecionar, volta a aparecer e deixa a class
-             "escolha" none, se clicar na outra, inverte  -->
-             <div id="listaHabilidades" style="display: none;">
-                 <ul>
-                     <li>HTML</li>
-                     <li>CSS</li>
-                     <li>JAVASCRIPT</li>
-                     <li>BOOTSTRAP</li>
-                 </ul>
-                 <ul>
-                     <li>REACT</li>
-                     <li>SASS</li>
-                     <li>MYSQL</li>
-                     <li>JQUERY</li>
-                 </ul>
-             </div>
-             
-                 <div id="menuExperiencias" style="display: none;">
-                     <div class="lista-experiencias">
-                         <h2 class="experiencia pointer" id="tituloJovem" onclick="mostrarJovem()">JOVEM APRENDIZ</h2>
-                         <hr class="separar-vertical">
-                         <h2 class="experiencia pointer" id="tituloTecnico" onclick="mostrarTecnico()">TECNICO DE SUPORTE EM TI</h2>
-                     </div>
-     
-     
-                     <div class="descricao-experiencia"  id="jovemExperiencia"> 
-                         <div class="dados-experiencia">
-                         <h2 class="h2">MOVICARGA</h2>
-                         <h2 class="h2">05/2019 - 05/2021</h2>
-                         </div>
-                         <p>
-                         Realizava funções administrativas no geral. Criação e manuseio de planilhas no Excel, controle de deslocamento de 
-                         veículos, inventário dos equipamentos da empresa, solicitação de armazém, compra e transferência de produtos via 
-                         TOTVS, organização de arquivos, etc.
-                         </p> 
-                     </div>
-                     <div class="descricao-experiencia" id="tecnicoExperiencia" style="display:none;"> 
-                         <div class="dados-experiencia">
-                         <h2 class="h2">SAMPASOFT SOLUÇÕES EM TI</h2>
-                         <h2 class="h2">03/2022 - ATUALMENTE</h2>
-                         </div>
-                         <p>
-                         Realizo implantação de um sistema de gestão de restaurantes. Meu trabalho vai desde a manutenção dos 
-                         computadores, tais como encontrar defeitos e sua solução, trocando as peças, etc. Depois a configuração do Windows,
-                         como controle de usuário, firewall, framework e rede. Depois a instalação. Após isso meu trabalho consiste em 
-                         configurar a rede, sendo os roteadores, antenas e impressoras e também passar cabo de rede. Após tudo estar 
-                         configurado e funcionando, eu preencho o banco de dados do software de gestão de restaurantes. E depois de o cliente 
-                         já estar em funcionamento, presto serviço de suporte e manutenção em geral.
-                         </p> 
-                     </div>
-     
+
+
+             <div class="descricao-experiencia"  id="jovemExperiencia"> 
+                 <div class="dados-experiencia">
+                 <h2 class="h2">MOVICARGA</h2>
+                 <h2 class="h2">05/2019 - 05/2021</h2>
                  </div>
-     
-     
-             </div> 
-     
-     
-         </section>
-         <script src="js.sobre.js"></script>
-    <!--Projetos-->
+                 <p>
+                 Realizava funções administrativas no geral. Criação e manuseio de planilhas no Excel, controle de deslocamento de 
+                 veículos, inventário dos equipamentos da empresa, solicitação de armazém, compra e transferência de produtos via 
+                 TOTVS, organização de arquivos, etc.
+                 </p> 
+             </div>
+             <div class="descricao-experiencia" id="tecnicoExperiencia" style="display:none;"> 
+                 <div class="dados-experiencia">
+                 <h2 class="h2">SAMPASOFT SOLUÇÕES EM TI</h2>
+                 <h2 class="h2">03/2022 - ATUALMENTE</h2>
+                 </div>
+                 <p>
+                 Realizo implantação de um sistema de gestão de restaurantes. Meu trabalho vai desde a manutenção dos 
+                 computadores, tais como encontrar defeitos e sua solução, trocando as peças, etc. Depois a configuração do Windows,
+                 como controle de usuário, firewall, framework e rede. Depois a instalação. Após isso meu trabalho consiste em 
+                 configurar a rede, sendo os roteadores, antenas e impressoras e também passar cabo de rede. Após tudo estar 
+                 configurado e funcionando, eu preencho o banco de dados do software de gestão de restaurantes. E depois de o cliente 
+                 já estar em funcionamento, presto serviço de suporte e manutenção em geral.
+                 </p> 
+             </div>
 
-        <section id="Projetos" class="conjunto-projetos">
-            
-            <div id="projeto1" class="projetos">
-                <p class="nome-projeto">Projeto em desenvolvimento...</p>
-                <img class="imagem-projeto" src="em obras.png" alt="">
-            </div>
+         </div>
 
-            <div id="projeto1" class="projetos">
-                <p class="nome-projeto">Projeto em desenvolvimento...</p>
-                <img class="imagem-projeto" src="em obras.png" alt="">
-            </div>
 
-            <div id="projeto1" class="projetos">
-                <p class="nome-projeto">Projeto em desenvolvimento...</p>
-                <img class="imagem-projeto" src="em obras.png" alt="">
-            </div>
+     </div> 
 
-            <div id="projeto1" class="projetos">
-                <p class="nome-projeto">Projeto em desenvolvimento...</p>
-                <img class="imagem-projeto" src="em obras.png" alt="">
-            </div>
 
-        </section>
+ </section>
+<script src="js/js.sobre.js"></script>
 </body>
 </html>
