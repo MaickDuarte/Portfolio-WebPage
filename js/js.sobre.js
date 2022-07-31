@@ -1,27 +1,19 @@
 /* 
 padrao: lista-habilidades e menu-experiencias com style="display: none;"
-
 ao clicar em 'PRINCIPAIS HABILIDADES' 
 - escolha = display:none;
 - lista-habilidades = display: flex;
 - menu-experiencias = display: none;
-
-
 ao clicar em EXPERIENCIAS PROFISSIONAIS
 - escolha = display:none;
 - lista-habilidades = display: none;
 - menu-experiencias = display: flex;
-
-
 ao clicar em JOVEM APRENDIZ
 - jovem-experiencia = display: flex;
 - tecnico-experiencia = display: none;
-
 ao clicar em TECNICO DE SUPORTE EM TI
 - jovem-experiencia = display: none;
 - tecnico-experiencia = display: flex;
-
-
 */
 var escolha = document.querySelector("#escolha");
 var ph = document.querySelector("#ph");
@@ -61,4 +53,19 @@ function mostrarTecnico(){
     tecnico.style.display = "flex";
     tj.style.cssText = "text-decoration: none";
     tt.style.cssText = "text-decoration: underline #390981";
+}
+
+
+/* adicionei um botao na tela com o font awesome
+    ao clicar nele, vai adicionar uma classe no nav-bar que mostra o menu
+    tambem vai adicionar o icone do X
+*/
+var menuBotao = document.querySelector("#menuBotao")
+function abrirMenu(){
+    var nav = document.querySelector(".nav-bar")
+    nav.classList.toggle("nav-bar-aberto")
+
+    var botao = document.querySelector(".fa-bars")
+    botao.classList.toggle("fa-x")
+
 }

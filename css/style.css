@@ -1,87 +1,101 @@
 *{
-    padding: 0;
     margin:0;
+    padding: 0;
     box-sizing: border-box;
-    border-style: none;
-    font-family: 'Smooch Sans', sans-serif;
+    font-family: "Smooch Sans";
+    color: white;
     text-decoration: none;
-    color:white;
 }
-
 html{
     scroll-behavior: smooth;
 }
-#menu{
-    height: 0px;
+.links-mobile{
+    display: none;
 }
-#espaco{
-    height:8vh;
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-
+.bg-nav{
+    position: absolute;
+        height:8vh;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
 }
-/* NavBar com Sobre, Projetos, Contato */
-.topo{
-    background-color: rgba(0, 0, 0, 0.473);
-    backdrop-filter: blur(2px);
-    width: 100%;
-    height: 8vh;
+.nav-bar{
     position: fixed;
     top:0;
-    color: white;
     display: flex;
+    background-color: rgba(0, 0, 0, 0.473);
+    backdrop-filter: blur(2px);
+    height: 8vh;
+    width: 100%;
     justify-content: flex-end;
     align-items: center;
+
 }
-.header-items{
+.nav-items{
     font-size: 2rem;
-    color: white;
-    padding: 0 20px;
-    text-decoration: underline solid #390883;
+    padding:0 20px;
+    text-decoration: underline #29065f ;
 }
-.header-items:hover{
+.nav-items:hover{
     transform: scale(1.2);
-    color: rgb(222, 209, 252);
+    color: rgb(209, 185, 231);
 }
-/* home*/
-.apresentacao{
-    display: flex;
+.home{
+    padding-top: 8vh;
     width: 100%;
-}
-.esquerda{
-    background-color: black;
-    flex:1;
     height: 100vh;
+    background:linear-gradient(90deg, black 75%, #29065f 75%);
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-.texto{
-    color: white;
+.esquerda-home{
     font-size: 2rem;
-    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text{
+    margin: 10px;
     text-align: center;
-    font-family: 'Smooch Sans', sans-serif;
-
 }
-.t1, .t2{
-    margin-top:20px
+.links{
+    margin-top: 13px;
+    padding:0px 7px;
+    align-self: center;
+    background-color: black;
+    border:3px solid #29065F;
+    border-radius: 5px;
+}
+.links:hover{
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; 
+}
+@keyframes rainbow{
+    20%{border-color: green;}
+    40%{border-color: yellow;}
+    60%{border-color: red;}
+    80%{border-color: blue;}
+    100%{border-color: #29065f;}
 }
 
-.direita{
-    background:linear-gradient(90deg, black 50%, #29065f 50%);
-    flex:1.5;
-    height: 100vh;
+.direita-home{
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.foto-home{
+    max-width: 90%;
+    max-height: 90%;
+}
 
-}
-.foto{
-    max-width: 65%;
-    max-height: 99%;
-}
+
+
+/*sobre mim*/
 /*sobre*/
 
 .pointer{
@@ -112,6 +126,9 @@ html{
     flex-direction: column;
     
 }
+.curriculo{
+    margin-top: 30px;
+}
 .foto-sobre{
     height: auto;
     max-width: 70%;
@@ -120,14 +137,7 @@ html{
 
     
 }
-.links{
-    margin-top: 13px;
-    padding:0px 7px;
-    align-self: center;
-    background-color: black;
-    border:3px solid #29065F;
-    border-radius: 5px;
-}
+
 
 .direita-sobre{
     flex:2;
@@ -187,6 +197,9 @@ html{
 .experiencia{
     margin:0 50px 0 50px;
 }
+.separar-experiencia{
+    height: 2rem;
+}
 
 .descricao-experiencia{
     align-self: center;
@@ -209,68 +222,4 @@ html{
 .descricao-experiencia > p{
     margin-top: 15px;
     font-size: 1.65rem
-}
-/* espaço dos projets*/
-
-.conjunto-projetos{
-    width: 100%;
-    margin: auto;
-    padding: 100px 0 150px 0;
-    background-color: rgb(3, 2, 8);
-    color: white;
-    font-size: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-}
-.projetos{
-    margin:20px auto;
-    height: 250px;
-    min-width: 40vw;
-    background-color: rgb(22, 14, 14);
-    border-width: 10px;
-    border-radius: 7px;
-    border-style: solid;
-    border-top: none;border-bottom: none;border-right: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-.projetos:hover{
-    animation-name:escala-cor;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-    @keyframes escala-cor{
-        100%{
-            transform: scale(1.05);
-            border-color: #390883;
-        }
-    }
-.nome-projeto{
-    margin-left: 20px;
-    display: flex;
-}
-
-.imagem-projeto{
-    background-color: rgb(10, 14, 75);
-    height: 84.5%;/*84.5*/
-    width: 90%;/*100*/
-    margin: auto;
-
-
-}
-.teste{
-    height: 100%;
-    width: 100%;
-    background-color: red;
-}
-
-/* espaço do contato*/
-
-.espaço-contato-alterar{
-    background-color: rgb(94, 94, 94);
-    height: 200px;
-
 }
