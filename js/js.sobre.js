@@ -69,3 +69,14 @@ function abrirMenu(){
     botao.classList.toggle("fa-x")
 
 }
+
+
+/* criei uma função que simplesmente tira ou coloca uma classe que deixa a seção
+2 dos projetos invisivel */
+
+var verMaisBotao = document.querySelector("#ver-mais")
+
+function verMaisProjetos(){
+    var projeto2 = document.querySelector(".conjunto-projetos-2")
+    projeto2.classList.toggle("hidden")
+}

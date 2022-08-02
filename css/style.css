@@ -62,11 +62,13 @@ html{
 }
 .links{
     margin-top: 13px;
+    font-size: 2rem;
     padding:0px 7px;
     align-self: center;
     background-color: black;
     border:3px solid #29065F;
-    border-radius: 5px;
+    border-radius: 10px;
+    cursor:pointer
 }
 .links:hover{
     animation-name: rainbow;
@@ -222,4 +224,70 @@ html{
 .descricao-experiencia > p{
     margin-top: 15px;
     font-size: 1.65rem
+}
+
+/*projetos*/
+#Projetos{
+    background-color:#1A0E31;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+}
+.titulo-projetos{
+    font-size: 2.6rem;
+    font-weight: 550;
+    padding: 70px 0 45px 0;
+}
+.conjunto-projetos-1, .conjunto-projetos-2{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+.projeto-container{
+    width: 90%;
+    margin:15px auto;
+    padding: 15px;
+}
+.projeto{
+    background-color: white;
+    border-top: 1rem solid #471765;
+    height: 30vh;
+    width: 90%;
+    margin: auto;
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+
+}
+.descricao-projeto{
+    width: 90%;
+    margin: auto;
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-align: justify;
+}
+.hidden {
+    display: none;
+}
+#ver-mais{
+
+    padding: 0 1rem;
+
+}
+.identificacao-provisoria{
+    background-color: #471765;
+    font-size: 2rem;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    padding: 20px;
+}
+.projeto:hover > .identificacao-provisoria{
+    font-size: 2.3rem;
+    
 }
