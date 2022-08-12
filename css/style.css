@@ -244,6 +244,7 @@ html{
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
+
 }
 .projeto-container{
     width: 90%;
@@ -290,4 +291,47 @@ html{
 .projeto:hover > .identificacao-provisoria{
     font-size: 2.3rem;
     
+}
+#contato{
+    background-color: #0B0713;
+    padding:50px 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contatos{
+display: flex;
+justify-content: center;
+
+}
+
+.contatos{
+    display: flex;
+    margin: 0 30px;
+    align-items: center;
+}
+.contatos:hover{
+    transform: scale(1.2);
+
+}
+.contatos:hover > .logo-contato{
+    color: rgb(209, 185, 231);
+}
+.contatos:hover > .contato-link{
+    color: rgb(209, 185, 231);
+}/* não consegui colocar nos dois filhos, por isso a redundancia*/
+
+.logo-contato, .contato-link{
+    font-size: 1.7rem;
+}
+
+.contato-link{
+    margin-left: 5px;
+}
+#assinatura{
+    margin-top: 50px;
+    font-weight: 500;
+}
+b{
+   color: #7000FF; 
 }
