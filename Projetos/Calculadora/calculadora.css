@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Smooch Sans";
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 25px;
+}
+.fundo{
+    background:linear-gradient(60deg, black 35%, #321469 100%);
+    height: 100vh;
+}
+#Calculadora{
+    text-align: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 8px;
+    border: 15px;
+    background-color: black;
+}
+#Caixa-resultado{
+    height: 50px;
+    width: 206px;
+    margin: 2px;
+    background-color: white;
+    display: flex;
+    justify-content: end;
+}
+#Resultado{
+    color: black;
+    align-self: center;
+    overflow: hidden;/* faz com que os numeros dentro do div não saiam dele*/
+    text-overflow: ellipsis;/* faz com que ao ultrapassar o limite do div, apareça 3 pontinhos no final*/
+}
+.botao{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #380a7e;
+    border: none;
+
+
+}
+
+.botao:hover{
+    background-color:#5d27c2 ;
+
+
+}
+.igual{
+    background-color: white;
+    color: black;
+    font-family: arial;
+    height: 102px;
+}
+.igual:hover{
+    background-color: rgb(19, 19, 19);
+    color: white;
+    
+}
+.botao-volta-portfolio{
+    
+    position: absolute;
+    top:10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 3px solid #380a7e;
+    font-size: 1rem;
+}
+
