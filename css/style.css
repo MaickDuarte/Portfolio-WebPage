@@ -257,14 +257,25 @@ html{
 .projeto{
     background-color: white;
     border-top: 1rem solid #471765;
-    height: 30vh;
+    height: 50vh;
     width: 90%;
     margin: auto;
     border-radius: 13px;
 
     display: flex;
-    align-items: center;
-
+    justify-content: center;
+    overflow: hidden;
+}
+#projeto-calculadora{
+    background:linear-gradient(60deg, black 20%, #1b0347 100%);
+    border: 2px solid white;
+    border-top: 0.5rem solid white;
+}
+.img-projeto{
+    transition: .4s;
+}
+#projeto-calculadora:hover > .img-projeto{
+    transform: scale(1.06);
 }
 .descricao-projeto{
     width: 90%;
@@ -290,7 +301,9 @@ html{
     overflow: hidden;
     transition: .4s;
     padding: 20px;
+    align-self: center;
 }
+
 .projeto:hover > .identificacao-provisoria{
     font-size: 2.3rem;
     
