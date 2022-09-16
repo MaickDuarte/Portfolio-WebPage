@@ -11,43 +11,48 @@
 </head>
 <body>
 <section class="fundo">
-    <a href="#" class="botao-volta-portfolio">Voltar para Portfólio</a>
+    <a href="\index.html" class="botao-link portfolio">Voltar para Portfólio</a>
+    <a href="https://github.com/MaickDuarte/Calculadora" target="_blank" class="botao-link repositorio">Ir para repositório</a>
     <div id="Calculadora">
             <h1>Calculadora</h1>
-            <p id="Caixa-resultado"></p>
+            <div id="Caixa-calculos">
+                <p id="calculo"></p>
+                <div class="campo-resultado"><span>=</span><p id="resultado"></p></div>
+            </div>
         <table>
             <tr>
-                <td><button class="botao">C</button></td>
-                <td><button class="botao"><</button></td>
-                <td><button class="botao">/</button></td>
-                <td><button class="botao">X</button></td>
+                <td><button class="botao" onclick="apagarTudo()" >C</button></td>
+                <td><button class="botao" onclick="apagarUltimo()"><</button></td>
+                <td><button class="botao" onclick="insertSimb('/')">/</button></td>
+                <td><button class="botao" onclick="insertSimb('*')">X</button></td>
             </tr>
             <tr>
-                <td><button class="botao">7</button></td>
-                <td><button class="botao">8</button></td>
-                <td><button class="botao">9</button></td>
-                <td><button class="botao">-</button></td>
+               
+                <td><button class="botao" onclick="insertNum(7)">7</button></td>
+                <td><button class="botao" onclick="insertNum(8)">8</button></td>
+                <td><button class="botao" onclick="insertNum(9)">9</button></td>
+                <td><button class="botao" onclick="insertSimb('-')">-</button></td>
             </tr>
             <tr>
-                <td><button class="botao">4</button></td>
-                <td><button class="botao">5</button></td>
-                <td><button class="botao">6</button></td>
-                <td><button class="botao">+</button></td>
+                <td><button class="botao" onclick="insertNum(4)">4</button></td>
+                <td><button class="botao" onclick="insertNum(5)">5</button></td>
+                <td><button class="botao" onclick="insertNum(6)">6</button></td>
+                <td><button class="botao" onclick="insertSimb('+')">+</button></td>
             </tr>
             <tr>
-                <td><button class="botao">1</button></td>
-                <td><button class="botao">2</button></td>
-                <td><button class="botao">3</button></td>
-                <td rowspan="2"><button class="botao igual">=</button></td>
+                <td><button class="botao" onclick="insertNum(1)">1</button></td>
+                <td><button class="botao" onclick="insertNum(2)">2</button></td>
+                <td><button class="botao" onclick="insertNum(3)">3</button></td>
+                <td rowspan="2"><button class="botao igual" onclick="calcular()">=</button></td>
             </tr>
             <tr>
-                <td><button class="botao">%</button></td>
-                <td><button class="botao">0</button></td>
-                <td><button class="botao">.</button></td>
+                <td><button class="botao" onclick="porcentagem()">%</button></td>
+                <td><button class="botao" onclick="insertNum(0)">0</button></td>
+                <td><button class="botao" onclick="insertPonto('.')">.</button></td>
             </tr>
         </table>
     </div>
 </section>
-
+<script src="calculadora.js"></script>
 </body>
 </html>
